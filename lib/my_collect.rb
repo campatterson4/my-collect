@@ -1,9 +1,11 @@
-def my_collect(collection)
+def my_collect(array) 
     i = 0
-    new_collection = []
-    while i < collection.length
-        new_collection << yield(collection[i])
-i += 1
+    result = []
+  
+    while i < array.size
+      block_given?
+      result << yield(array[i])
+      i += 1
     end
-    new_collection
-end
+  result
+  end
